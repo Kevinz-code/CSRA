@@ -36,7 +36,7 @@ python utils/prepare_coco.py --data_path  Dataset/COCO2014
 which will automatically result in json files in *./data/voc07* and *./data/coco*
 
 ## Validation
-We provide pretrained models for validation. ResNet101 trained on ImageNet with CutMix augmentation can be downloaded 
+We provide pretrained models for validation. ResNet101 trained on ImageNet with **CutMix** augmentation can be downloaded 
 [here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).
 |Dataset      | model     |   Head        |   mAP     | Download   |
 |  ---------- | -------   |  :--------:   | -------   | --------   |
@@ -56,4 +56,4 @@ On VOC2007 dataset, run:
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20 --cutmix CutMix_ResNet101.pth
 ```
-Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation
+Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation (which is supposed to gain better performance)
