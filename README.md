@@ -3,7 +3,7 @@ Official code of ICCV2021 paper. [Residual Attention: A Simple But Effective Met
 
 #### Training and Validation code on VOC2007 and MS-COCO has been updated!
 
-### Requirements
+## Requirements
 - Python 3.7
 - pytorch 1.6
 - torchvision 0.7.0
