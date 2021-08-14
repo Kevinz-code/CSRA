@@ -57,7 +57,8 @@ You can run either of these two lines below
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20 --cutmix CutMix_ResNet101.pth
 ```
-Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation (which is supposed to gain better performance)
+Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation
+[link](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).(which is supposed to gain better performance)
 
 #### MS-COCO
 run the ResNet-101 with 4 heads
