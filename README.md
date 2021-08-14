@@ -17,16 +17,16 @@ We expect VOC2007 and COCO2014 dataset to have the following structure
 ```
 Dataset/
 |-- VOCdevkit/
-|----- VOC2007/
+|---- VOC2007/
 |-------- JPEGImages/
 |-------- Annotations/
 |-------- ImageSets/
 |-- COCO2014/
-|----- annotations/
+|---- annotations/
 |----- images/
 |-------- train/
 |-------- val/
-
+...
 ```
 
 
