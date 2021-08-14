@@ -70,3 +70,8 @@ run the ResNet-101 pretrained with CutMix with 6 heads
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.5 --dataset coco --num_cls 80
 ```
 You can feel free to adjust the hyper-parameters such as number of attention heads (--num_heads), or the Lambda (--lam). Still, the default values of them in the above command are supposed to be the best.
+
+
+## Acknowledgement
+
+We thank Lin Sui (http://www.lamda.nju.edu.cn/suil/) for his initial contribution to this project.
