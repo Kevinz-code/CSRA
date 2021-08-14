@@ -47,6 +47,7 @@ def train(i, args, model, train_loader, optimizer, warmup_scheduler):
 
         optimizer.zero_grad()
         logit, loss = model(img, target)
+        loss = loss.mean()
         loss.backward()
         optimizer.step()
         t = time.time() - batch_begin
@@ -99,11 +100,10 @@ def main():
     args = Args()
     # model 
     model = ResNet_CSRA(num_heads=args.num_heads, lam=args.lam, num_classes=args.num_cls, cutmix=args.cutmix)
+    model.cuda()
     if torch.cuda.device_count() > 1:
         print("lets use {} GPUs.".format(torch.cuda.device_count()))
         model = nn.DataParallel(model, device_ids=range(torch.cuda.device_count))
-    else:
-        model = model.cuda()
 
     # data
     if args.dataset == "voc07":

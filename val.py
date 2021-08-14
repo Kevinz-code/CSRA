@@ -60,13 +60,13 @@ def main():
 
     # model 
     model = ResNet_CSRA(num_heads=args.num_heads, lam=args.lam, num_classes=args.num_cls)
+    model.cuda()
     print("Loading weights from {}".format(args.load_from))
     if torch.cuda.device_count() > 1:
         print("lets use {} GPUs.".format(torch.cuda.device_count()))
         model = nn.DataParallel(model, device_ids=range(torch.cuda.device_count))
         model.module.load_state_dict(torch.load(args.load_from))
     else:
-        model = model.cuda()
         model.load_state_dict(torch.load(args.load_from))
 
     # data
