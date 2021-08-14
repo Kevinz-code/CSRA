@@ -13,7 +13,7 @@ $\lambda$
 
 ## Validation
 We provide pretrained models for validation. Please refer to the following link to download them. 
-|Dataset| model       |  Head  | $\lambda$  |
+|Dataset| model       |  Head  | $\\lambda$  |
 |  ---------- | -------  |  ---------- | -------   |
 |VOC2007| ResNet-101   |   68.4%      |  76   |
 |MS-COCO| ResNet-cut |  63.4%      |  45   |
