@@ -5,6 +5,7 @@ import numpy as np
 from pycocotools.coco import COCO
 
 
+
 def make_data(data_path=None, tag="train"):
     annFile = os.path.join(data_path, "annotations/instances_{}2014.json".format(tag))
     coco = COCO(annFile)

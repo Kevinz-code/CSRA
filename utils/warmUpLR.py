@@ -1,5 +1,6 @@
 import torch
 
+
 class WarmUpLR(torch.optim.lr_scheduler._LRScheduler):
     def __init__(self, optimizer, total_iters, last_epoch=-1):
         self.total_iters = total_iters

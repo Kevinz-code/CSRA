@@ -16,7 +16,6 @@ model_urls = {
 }
 
 
-
 class CSRA(nn.Module): # one basic block 
     def __init__(self, input_dim, num_classes, T, lam):
         super(CSRA, self).__init__()

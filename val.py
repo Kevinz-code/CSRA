@@ -55,6 +55,7 @@ def val(args, model, test_loader, test_file):
     evaluation(result=result_list, types=args.dataset, ann_path=test_file[0])
 
 
+
 def main():
     args = Args()
 

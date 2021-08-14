@@ -2,6 +2,7 @@ import json
 import numpy as np
 
 
+
 def json_metric(score_json, target_json, num_classes, types):
     assert len(score_json) == len(target_json)
     scores = np.zeros((len(score_json), num_classes))

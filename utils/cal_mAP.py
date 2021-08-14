@@ -4,7 +4,6 @@ import torch
 import json
 
 
-
 def json_map(cls_id, pred_json, ann_json, types):
     assert len(ann_json) == len(pred_json)
     num = len(ann_json)

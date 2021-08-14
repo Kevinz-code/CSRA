@@ -7,7 +7,6 @@ from .cal_mAP import json_map
 from .cal_PR import json_metric, metric, json_metric_top3
 
 
-
 voc_classes = ("aeroplane", "bicycle", "bird", "boat", "bottle",
            "bus", "car", "cat", "chair", "cow", "diningtable",
            "dog", "horse", "motorbike", "person", "pottedplant",
