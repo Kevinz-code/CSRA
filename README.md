@@ -13,6 +13,6 @@ Official code of ICCV2021 paper. [Residual Attention: A Simple But Effective Met
 ## Validation
 We provide pretrained models for validation. Please refer to the following link to download them. 
 |Dataset| model       |  VOC2007  | MS-COCO  |
-|VOC2007| ResNet-101  |  ---------- | -------   |
+|  ---------- | -------  |  ---------- | -------   |
 |VOC2007| ResNet-101   |   68.4%      |  76   |
 |MS-COCO| ResNet-cut |  63.4%      |  45   |
