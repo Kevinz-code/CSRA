@@ -51,12 +51,20 @@ CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 1 --lam 0.1 --dataset voc07 --n
 ```
 
 ## Training
-On VOC2007 dataset, run either of these two lines below:
+#### VOC2007
+You can run either of these two lines below 
 ```shell
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20 --cutmix CutMix_ResNet101.pth
 ```
 Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation (which is supposed to gain better performance)
 
-On MS-COCO dataset, run either of the following:
-
+#### MS-COCO
+run the ResNet-101 with 4 heads
+```shell
+CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.5 --dataset coco --num_cls 80
+```
+run the ResNet-101 pretrained with CutMix with 6 heads
+```shell
+CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.5 --dataset coco --num_cls 80
+```
