@@ -39,7 +39,7 @@ python utils/prepare_coco.py --data_path  Dataset/COCO2014
 which will automatically result in json files in *./data/voc07* and *./data/coco*
 
 ## Validation
-We provide pretrained models on Google Drive for validation. ResNet101 trained on ImageNet with **CutMix** augmentation can be downloaded 
+We provide pretrained models on [Google Drive](https://www.google.com/drive/) for validation. ResNet101 trained on ImageNet with **CutMix** augmentation can be downloaded 
 [here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).
 |Dataset      | Backbone  |   Head nums   |   mAP  |  Resolution     | Download   |
 |  ---------- | -------   |  :--------:   | ------ |  :---:          | --------   |
