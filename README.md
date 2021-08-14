@@ -4,11 +4,12 @@ This is the official code & website of ICCV 2021 paper: [Residual Attention: A S
 ![attetion](https://github.com/Kevinz-code/CSRA/blob/master/utils/COCO_val2014_000000000488.jpg)
 
 
-sdsd
 
 ### Training and Validation code has been released!
-This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/). If you have any problem about the code, please feel free to contact Mr. Ke Zhu (zhuk@lamda.nju.edu.cn). The package is free for academic usage. You can run it at your own risk. For other purposes, please contact Prof. Jianxin Wu (mail to wujx2001@gmail.com).
+This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/). If you have any problem about the code, please feel free to contact Mr. Ke Zhu (zhuk@lamda.nju.edu.cn). The package is free for academic usage. You can run it at your own risk. For other purposes, please contact Prof. Jianxin Wu (mail to 
+wujx2001@gmail.com).
 
+s
 ## Requirements
 - Python 3.7
 - pytorch 1.6
