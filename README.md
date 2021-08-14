@@ -9,6 +9,7 @@ Official code of ICCV2021 paper. [Residual Attention: A Simple But Effective Met
 - torchvision 0.7.0
 - pycocotools 2.0
 - tqdm 4.49.0, pillow 7.2.0
+$\lambda$
 
 ## Validation
 We provide pretrained models for validation. Please refer to the following link to download them. 
