@@ -48,7 +48,7 @@ We provide pretrained models for validation. ResNet101 trained on ImageNet with 
 Put these models in ./models_local directory, and run
 ```shell
 CUDA_VISIBLE_DEVICES=0 python val.py \<br>
-&ensp&ensp --num_heads 1 \
+             --num_heads 1 \
 &ensp&ensp --lam 0.1     \
 &ensp&ensp --dataset voc07\
 &ensp&ensp --num_cls 20  \
