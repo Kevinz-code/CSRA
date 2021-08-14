@@ -65,7 +65,7 @@ run the ResNet-101 with 4 heads
 ```shell
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.5 --dataset coco --num_cls 80
 ```
-run the ResNet-101 pretrained with CutMix with 6 heads
+run the ResNet-101 (pretrained with CutMix) with 6 heads
 ```shell
 CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.5 --dataset coco --num_cls 80
 ```
