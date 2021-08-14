@@ -45,10 +45,7 @@ We provide pretrained models for validation. ResNet101 trained on ImageNet with 
 | COCO        |ResNet-101 |     4         |  83.3     | [download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6     | [download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
 
-Put these models in ./models_local directory, and run
+Put these models in ./models_local directory, and run the following (for example)
 ```shell
-CUDA_VISIBLE_DEVICES=0 python val.py \
-            --num_heads 1   --lam 0.1     \
-            --dataset voc07 --num_cls 20  \
-            --load_from models_local/resnet101_voc07_head1_lam0.1_94.7.pth
+CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20  --load_from models_local/resnet101_voc07_head1_lam0.1_94.7.pth
 ```
