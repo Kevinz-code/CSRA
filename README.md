@@ -29,7 +29,7 @@ Dataset/
 |------ val2014/
 ...
 ```
-Then run the command to generate .json file of these datasets.
+Then run the following command to generate json file (for implementation) of these datasets.
 ```shell
 python utils/prepare_voc.py --data_path /opt/Dataset/VOCdevkit/
 python utils/prepare_coco.py --data_path /opt/Dataset/COCO2014/
