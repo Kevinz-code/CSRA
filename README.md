@@ -13,7 +13,7 @@ This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/). If 
 $\lambda$
 
 ## Dataset
-We expect VOC2007 and COCO2014 dataset to have the following structure
+We expect VOC2007 and COCO2014 dataset to have the following structure:
 ```
 Dataset/
 |-- VOCdevkit/
@@ -29,7 +29,11 @@ Dataset/
 |------ val2014/
 ...
 ```
-
+Then run the command to generate .json file of these datasets.
+```shell
+python utils/prepare_voc.py --data_path /opt/Dataset/VOCdevkit/
+python utils/prepare_coco.py --data_path /opt/Dataset/COCO2014/
+```
 
 ## Validation
 We provide pretrained models for validation. Please refer to the following link to download them. 
