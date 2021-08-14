@@ -36,7 +36,8 @@ python utils/prepare_coco.py --data_path  Dataset/COCO2014
 which will automatically result in json files in ./data/voc07 and ./data/coco
 
 ## Validation
-We provide pretrained models for validation. Please refer to the following link to download them. ResNet101 trained with CutMix can be downloaded [here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV) 
+We provide pretrained models for validation. Please refer to the following link to download them. ResNet101 trained on ImageNet with CutMix augmentation can be downloaded 
+[here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).
 |Dataset      | model     |  Head       |   mAP     | Download   |
 |  ---------- | -------   |  ---------- | -------   | --------   |
 | VOC2007     |ResNet-101 |     1       |  94.7     |    |
