@@ -25,8 +25,8 @@ Dataset/
 |-- COCO2014/
 |---- annotations/
 |---- images/
-|------ train/
-|------ val/
+|------ train2014/
+|------ val2014/
 ...
 ```
 
