@@ -15,23 +15,16 @@ $\lambda$
 ## Dataset
 We expect VOC2007 and COCO2014 dataset to have the following structure
 ```
-'''
-root/
-|-- train/
-|   |-- class1 |-- image1.jpg 
-|   |-- class2 |-- image2.jpg
-|   |-- class3 |-- image3.jpg
-|   ...
-|-- val/
-|   |-- class1 |-- image1.jpg 
-|   |-- class2 |-- image2.jpg
-|   |-- class3 |-- image3.jpg
-|   ...
-|-- myval/ (groundtruth annotation xml file, you can change the folder name, and modify it in Line 67 in PSOL_inference.py)
-|   |-- class1 |-- image1.xml 
-|   |-- class2 |-- image2.xml
-|   |-- class3 |-- image3.xml
-...
+Dataset/
+|-- VOCdevkit/
+|----- VOC2007/
+
+|-- COCO2014/
+|----- annotations/
+|----- images/
+|-------- train/
+|-------- val/
+
 ```
 
 
