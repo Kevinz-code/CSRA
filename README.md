@@ -1,5 +1,5 @@
 ## Residual Attention: A Simple But Effective Method for Multi-Label Recoginition
-Accepted by ICCV2021, see [pdf](https://arxiv.org/abs/2108.02456)<br>.
+Accepted by ICCV2021, see [pdf](https://arxiv.org/abs/2108.02456)<br>
 This is the official code of this paper.
 
 ### Training and Validation code has been released!
