@@ -1,7 +1,7 @@
 # CSRA
 Official code of ICCV2021 paper. [Residual Attention: A Simple But Effective Method for Multi-Label Recoginition](https://arxiv.org/abs/2108.02456)<br>
 
-#### Training and Validation code on VOC2007 and MS-COCO has been updated!
+This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/), and we also thank Mr. Lin Sui for his contribution (http://www.lamda.nju.edu.cn/suil/). If you have any problem about the code, please feel free to contact Mr. Ke Zhu (zhuk@lamda.nju.edu.cn). The package is free for academic usage. You can run it at your own risk. For other purposes, please contact Prof. Jianxin Wu (mailto:wujx2001@gmail.com).
 
 ## Requirements
 - Python 3.7
