@@ -10,7 +10,6 @@ This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/). If 
 - torchvision 0.7.0
 - pycocotools 2.0
 - tqdm 4.49.0, pillow 7.2.0
-$\lambda$
 
 ## Dataset
 We expect VOC2007 and COCO2014 dataset to have the following structure:
