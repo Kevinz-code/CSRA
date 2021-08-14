@@ -127,7 +127,6 @@ class ResNet_CSRA(ResNet):
         model_dict = self.state_dict()
         try:
             pretrained_dict = {k: v for k, v in state_dict.items() if k in model_dict}
-            print(pretrained_dict.keys())
             self.load_state_dict(pretrained_dict)
         except:
             logger = logging.getLogger()
