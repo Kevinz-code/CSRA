@@ -38,7 +38,7 @@ which will automatically result in json files in ./data/voc07 and ./data/coco
 ## Validation
 We provide pretrained models for validation. ResNet101 trained on ImageNet with CutMix augmentation can be downloaded 
 [here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).
-|Dataset      | model     |  CSRA Head    |   mAP     | Download   |
+|Dataset      | model     |   Head        |   mAP     | Download   |
 |  ---------- | -------   |  :--------:   | -------   | --------   |
 | VOC2007     |ResNet-101 |     1         |  94.7     | [download](https://drive.google.com/u/0/uc?export=download&confirm=bXcv&id=1cQSRI_DWyKpLa0tvxltoH9rM4IZMIEWJ)   |
 | VOC2007     |ResNet-cut |     1         |  95.2     | [download](https://drive.google.com/u/0/uc?export=download&confirm=otx_&id=1bzSsWhGG-zUNQRMB7rQCuPMqLZjnrzFh)  |
