@@ -13,7 +13,9 @@ This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/). If 
 $\lambda$
 
 ## Dataset
-We expect the COCO
+We expect VOC2007 and COCO2014 dataset to have the following structure
+```
+'''
 root/
 |-- train/
 |   |-- class1 |-- image1.jpg 
