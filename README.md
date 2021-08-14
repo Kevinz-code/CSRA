@@ -21,6 +21,7 @@ Dataset/
 |------- JPEGImages/
 |------- Annotations/
 |------- ImageSets/
+......
 |-- COCO2014/
 |---- annotations/
 |---- images/
