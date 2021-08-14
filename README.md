@@ -76,7 +76,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 6 --lam 0.4 --dataset coco --n
 You can feel free to adjust the hyper-parameters such as number of attention heads (--num_heads), or the Lambda (--lam). Still, the default values of them in the above command are supposed to be the best.
 
 ## Notice
-To avoid confusion, please note the 4 lines of code in Figure 1 (in paper) is only used for **test** stage (without training), which is our motivation. When our model is end-to-end training and testing, multi-head-attention (Section 3.4 in paper) is used with different T values. Also, when H=1 and T=infty, the implementation code of multi-head-attention is exactly the same with Figure 1.
+To avoid confusion, please note the **4 lines of code** in Figure 1 (in paper) is only used for **test** stage (without training), which is our motivation. When our model is end-to-end training and testing, multi-head-attention (Section 3.4 in paper) is used with different T values. Also, when H=1 and T=infty, the implementation code of multi-head-attention is exactly the same with Figure 1.
 
 ## Acknowledgement
 
