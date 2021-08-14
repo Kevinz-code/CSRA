@@ -31,9 +31,10 @@ Dataset/
 ```
 Then run the following command to generate json file (for implementation) of these datasets.
 ```shell
-python utils/prepare_voc.py --data_path /Dataset/VOCdevkit/
-python utils/prepare_coco.py --data_path /Dataset/COCO2014/
+python utils/prepare_voc.py  --data_path  Dataset/VOCdevkit
+python utils/prepare_coco.py --data_path  Dataset/COCO2014
 ```
+which will automatically result in json files in ./data/voc07 and ./data/coco
 
 ## Validation
 We provide pretrained models for validation. Please refer to the following link to download them. 
