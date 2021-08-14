@@ -49,3 +49,11 @@ After model preparation, you can run the following command:
 ```shell
 CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20  --load_from PRETRAINED_MODEL.pth
 ```
+
+## Training
+On VOC2007 dataset, run:
+```shell
+CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20
+CUDA_VISIBLE_DEVICES=0 python main.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20 --cutmix CutMix_ResNet101.pth
+```
+Note that the first command use the Official ResNet-101 backbone while the second command use the ResNet-101 pretrained on ImageNet with CutMix augmentation
