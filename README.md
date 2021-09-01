@@ -49,6 +49,20 @@ python utils/prepare/wider.py --data_path Dataset/WIDER
 ```
 which will automatically result in json files in *./data/voc07*, *./data/coco* and *./data/wider*
 
+## Demo
+We provide prediction demos of our models. The demo images (picked from VCO2007) has already been put into *./utils/demo_images/*, you can simply run demo.py by using our CSRA models pretrained on VOC2007:
+```shell
+CUDA_VISIBLE_DEVICES=0 python demo.py --model resnet101 --num_heads 1 --lam 0.1 --dataset voc07 --load_from OUR_VOC_PRETRAINED.pth --img_dir utils/demo_images
+```
+which will output like this:
+```shell
+utils/images/000001.jpg prediction: dog,person,
+utils/images/000004.jpg prediction: car,
+utils/images/000002.jpg prediction: train,
+...
+```
+
+
 ## Validation
 We provide pretrained models on [Google Drive](https://www.google.com/drive/) for validation. ResNet101 trained on ImageNet with **CutMix** augmentation can be downloaded 
 [here](https://drive.google.com/u/0/uc?export=download&confirm=kYfp&id=1T4AxsAO2tszvhn62KFN5kaknBtBZIpDV).
