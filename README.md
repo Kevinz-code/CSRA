@@ -2,7 +2,7 @@
 This is the official code of ICCV 2021 paper:<br>
 [Residual Attention: A Simple But Effective Method for Multi-Label Recoginition](https://arxiv.org/abs/2108.02456)<br>
 
-![attention](https://github.com/Kevinz-code/CSRA/blob/master/pipeline/pipeline.PNG)
+![attention](https://github.com/Kevinz-code/CSRA/blob/master/utils/pipeline.PNG)
 
 ### Training and Validation code has been released! (including VIT models on Wider-Attribute)
 This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/) and we have just finished the implementation code of ViT models. If you have any question about the code, please feel free to contact Mr. Ke Zhu (zhuk@lamda.nju.edu.cn). The package is free for academic usage. You can run it at your own risk. For other purposes, please contact Prof. Jianxin Wu (mail to 
