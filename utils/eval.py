@@ -31,7 +31,6 @@ wider_classes = (
 
 class_dict = {
     "voc07": voc_classes,
-    "voc12": voc_classes,
     "coco": coco_classes,
     "wider": wider_classes,
 }

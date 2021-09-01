@@ -5,14 +5,18 @@ from torchvision.transforms import transforms
 import torch
 import numpy as np
 
+# modify for transformation for vit
+# modfify wider crop-person images
 
 
-class ResNet_Dataset(Dataset):
+class DataSet(Dataset):
     def __init__(self,
                 ann_files,
                 augs,
                 img_size,
+                dataset,
                 ):
+        self.dataset = dataset
         self.ann_files = ann_files
         self.augment = self.augs_function(augs, img_size)
         self.transform = transforms.Compose(
@@ -27,10 +31,17 @@ class ResNet_Dataset(Dataset):
         self.load_anns()
         print(self.augment)
 
-    def augs_function(self, augs, img_size):
-        if augs == None:
-            raise KeyError("Please enter the data augmentation!")
-            
+        # in wider dataset we use vit models
+        # so transformation has been changed
+        if self.dataset == "wider":
+            self.transform = transforms.Compose(
+                [
+                    transforms.ToTensor(),
+                    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+                ] 
+            )        
+
+    def augs_function(self, augs, img_size):            
         t = []
         if 'randomflip' in augs:
             t.append(transforms.RandomHorizontalFlip())
@@ -58,13 +69,26 @@ class ResNet_Dataset(Dataset):
         idx = idx % len(self)
         ann = self.anns[idx]
         img = Image.open(ann["img_path"]).convert("RGB")
-        img = self.augment(img)
-        img = self.transform(img)
-        message = {
-            "img_path": ann["img_path"],
-            "target": torch.Tensor(ann["target"]),
-            "img": img
-        }
+
+        if self.dataset == "wider":
+            x, y, w, h = ann['bbox']
+            img_area = img.crop([x, y, x+w, y+h])
+            img_area = self.augment(img_area)
+            img_area = self.transform(img_area)
+            message = {
+                "img_path": ann['img_path'],
+                "target": torch.Tensor(ann['target']),
+                "img": img_area
+            }
+        else: # voc and coco
+            img = self.augment(img)
+            img = self.transform(img)
+            message = {
+                "img_path": ann["img_path"],
+                "target": torch.Tensor(ann["target"]),
+                "img": img
+            }
+
         return message
         # finally, if we use dataloader to get the data, we will get
         # {

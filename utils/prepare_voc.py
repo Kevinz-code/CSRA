@@ -120,6 +120,7 @@ def transdifi(data_path):
     for item in os.listdir(label_dir):
         os.remove(os.path.join(label_dir, item))
     os.rmdir(label_dir)
+    
 
 # We treat difficult classes in trainval_data as negtive while ignore them in test_data
 # The ignoring operation can be automatically done during evaluation (testing).

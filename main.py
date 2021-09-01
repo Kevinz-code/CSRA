@@ -5,11 +5,14 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from pipeline.resnet_csra import ResNet_CSRA
-from pipeline.resnet_dataset import ResNet_Dataset
+from pipeline.vit_csra import VIT_B16_224_CSRA, VIT_L16_224_CSRA, VIT_CSRA
+from pipeline.dataset import DataSet
 from utils.eval import evaluation
 from utils.warmUpLR import WarmUpLR
 from tqdm import tqdm
 
+
+# modify for wider dataset and vit models
 
 def Args():
     parser = argparse.ArgumentParser(description="settings")
@@ -64,6 +67,7 @@ def train(i, args, model, train_loader, optimizer, warmup_scheduler):
 
         if warmup_scheduler and i <= args.warmup_epoch:
             warmup_scheduler.step()
+        
     
     t = time.time() - epoch_begin
     print("Epoch {} training ends, total {:.2f}s".format(i, t))
@@ -91,7 +95,6 @@ def val(i, args, model, test_loader, test_file):
                     "scores": result[k]
                 }
             )
-    
     # cal_mAP OP OR
     evaluation(result=result_list, types=args.dataset, ann_path=test_file[0])
 
@@ -99,12 +102,19 @@ def val(i, args, model, test_loader, test_file):
 
 def main():
     args = Args()
-    # model 
-    model = ResNet_CSRA(num_heads=args.num_heads, lam=args.lam, num_classes=args.num_cls, cutmix=args.cutmix)
+
+    # model
+    if args.model == "resnet101": 
+        model = ResNet_CSRA(num_heads=args.num_heads, lam=args.lam, num_classes=args.num_cls, cutmix=args.cutmix)
+    if args.model == "vit_B16_224":
+        model = VIT_B16_224_CSRA(cls_num_heads=args.num_heads, lam=args.lam, cls_num_cls=args.num_cls)
+    if args.model == "vit_L16_224":
+        model = VIT_L16_224_CSRA(cls_num_heads=args.num_heads, lam=args.lam, cls_num_cls=args.num_cls)
+        
     model.cuda()
     if torch.cuda.device_count() > 1:
         print("lets use {} GPUs.".format(torch.cuda.device_count()))
-        model = nn.DataParallel(model, device_ids=range(torch.cuda.device_count))
+        model = nn.DataParallel(model, device_ids=list(range(torch.cuda.device_count())))
 
     # data
     if args.dataset == "voc07":
@@ -115,9 +125,14 @@ def main():
         train_file = ['data/coco/train_coco2014.json']
         test_file = ['data/coco/val_coco2014.json']
         step_size = 5
+    if args.dataset == "wider":
+        train_file = ['data/wider/trainval_wider.json']
+        test_file = ["data/wider/test_wider.json"]
+        step_size = 5
+        args.train_aug = ["randomflip"]
 
-    train_dataset = ResNet_Dataset(train_file, args.train_aug, args.img_size)
-    test_dataset = ResNet_Dataset(test_file, args.test_aug, args.img_size)
+    train_dataset = DataSet(train_file, args.train_aug, args.img_size, args.dataset)
+    test_dataset = DataSet(test_file, args.test_aug, args.img_size, args.dataset)
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=8)
     test_loader = DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False, num_workers=8)
 
@@ -145,6 +160,7 @@ def main():
     # training and validation
     for i in range(1, args.total_epoch + 1):
         train(i, args, model, train_loader, optimizer, warmup_scheduler)
+        torch.save(model.state_dict(), "checkpoint/{}/epoch_{}.pth".format(args.model, i))
         val(i, args, model, test_loader, test_file)
         scheduler.step()
 
