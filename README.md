@@ -74,7 +74,7 @@ For wider attribute with ViT models, run the following
 CUDA_VISIBLE_DEVICES=0 python val.py --model vit_B16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_B16_MODEL.pth
 CUDA_VISIBLE_DEVICES=0 python val.py --model vit_L16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_L16_MODEL.pth
 ```
-To provide pretrained models on Wider-Attribute dataset, we retrain them recently, which has a slightly different performance (~0.1%mAP) from what has been presented in our paper.
+To provide pretrained VIT models on Wider-Attribute dataset, we retrain them recently, which has a slightly different performance (~0.1%mAP) from what has been presented in our paper.
 ## Training
 #### VOC2007
 You can run either of these two lines below 
