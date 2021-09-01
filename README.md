@@ -59,11 +59,19 @@ We provide pretrained models on [Google Drive](https://www.google.com/drive/) fo
 | COCO        |ResNet-101 |     4         |  83.3  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
 
-After model preparation, you can run the following validation command:
+For voc2007, run the following validation example:
 ```shell
-CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20  --load_from PRETRAINED_MODEL.pth
+CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 1 --lam 0.1 --dataset voc07 --num_cls 20  --load_from MODEL.pth
 ```
-
+For coco2014, run the following validation example:
+```shell
+CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 4 --lam 0.5 --dataset coco --num_cls 80  --load_from MODEL.pth
+```
+For wider attribute with ViT models, run the following
+```shell
+CUDA_VISIBLE_DEVICES=0 python val.py --model vit_B16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_B16_MODEL.pth
+CUDA_VISIBLE_DEVICES=0 python val.py --model vit_L16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_L16_MODEL.pth
+```
 ## Training
 #### VOC2007
 You can run either of these two lines below 
