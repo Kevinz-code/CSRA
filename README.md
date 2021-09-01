@@ -16,7 +16,7 @@ wujx2001@gmail.com).
 - tqdm 4.49.0, pillow 7.2.0
 
 ## Dataset
-We expect VOC2007 and COCO2014 dataset to have the following structure:
+We expect VOC2007, COCO2014 adn Wider-Attribute dataset to have the following structure:
 ```
 Dataset/
 |-- VOCdevkit/
