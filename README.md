@@ -58,7 +58,7 @@ We provide pretrained models on [Google Drive](https://www.google.com/drive/) fo
 | VOC2007     |ResNet-cut |     1         |  95.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=otx_&id=1bzSsWhGG-zUNQRMB7rQCuPMqLZjnrzFh)  |
 | COCO        |ResNet-101 |     4         |  83.3  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
-| Wider       |VIT_B16_224|     1         |  89.0  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=PZcy&id=1qkJgWQ2EOYri8ITLth_wgnR4kEsv0bfj)   |
+| Wider       |VIT_B16_224|     1         |  89.0  |  448x448 |[download](https://drive.google.com/u/0/uc?id=1qkJgWQ2EOYri8ITLth_wgnR4kEsv0bfj&export=download)   |
 | Wider       |VIT_L16_224|     1         |  90.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
 
 For voc2007, run the following validation example:
