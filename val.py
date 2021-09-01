@@ -7,8 +7,8 @@ from torch.utils.data import DataLoader
 from pipeline.resnet_csra import ResNet_CSRA
 from pipeline.vit_csra import VIT_B16_224_CSRA, VIT_L16_224_CSRA, VIT_CSRA
 from pipeline.dataset import DataSet
-from utils.eval import evaluation
-from utils.warmUpLR import WarmUpLR
+from utils.evaluation.eval import evaluation
+from utils.evaluation.eval import WarmUpLR
 from tqdm import tqdm
 
 
