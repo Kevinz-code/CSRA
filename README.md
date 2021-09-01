@@ -4,8 +4,8 @@ This is the official code of ICCV 2021 paper:<br>
 
 ![attention](https://github.com/Kevinz-code/CSRA/blob/master/utils/pipeline.PNG)
 
-### Our final version of code has been released!
-### We provide ResNet, ViT models on VOC2007, COCO2014 and Wider-Attribute!
+### Our Demo, Training and Validation code has been released!
+#### We provide ResNet, ViT models on VOC2007, COCO2014 and Wider-Attribute!
 This package is developed by Mr. Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/) and we have just finished the implementation code of ViT models. If you have any question about the code, please feel free to contact Mr. Ke Zhu (zhuk@lamda.nju.edu.cn). The package is free for academic usage. You can run it at your own risk. For other purposes, please contact Prof. Jianxin Wu (mail to 
 wujx2001@gmail.com).
 
