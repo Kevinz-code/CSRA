@@ -32,13 +32,14 @@ Dataset/
 |------ val2014/
 ......
 |-- WIDER/
-|---- Annotations/
-|------ wider_attribute_test.json/
-|------ wider_attribute_trainval.json/
 |---- Image/
 |------ train/
 |------ val/
 |------ test/
+|---- Annotations/
+|------ wider_attribute_test.json/
+|------ wider_attribute_trainval.json/
+
 ...
 ```
 Then directly run the following command to generate json file (for implementation) of these datasets.
