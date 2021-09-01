@@ -58,6 +58,8 @@ We provide pretrained models on [Google Drive](https://www.google.com/drive/) fo
 | VOC2007     |ResNet-cut |     1         |  95.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=otx_&id=1bzSsWhGG-zUNQRMB7rQCuPMqLZjnrzFh)  |
 | COCO        |ResNet-101 |     4         |  83.3  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
+| Wider       |VIT_B16_224|     1         |  89.0  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
+| Wider       |VIT_L16_224|     1         |  90.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
 
 For voc2007, run the following validation example:
 ```shell
@@ -72,6 +74,7 @@ For wider attribute with ViT models, run the following
 CUDA_VISIBLE_DEVICES=0 python val.py --model vit_B16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_B16_MODEL.pth
 CUDA_VISIBLE_DEVICES=0 python val.py --model vit_L16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_L16_MODEL.pth
 ```
+Note that we re-train the VIT models on Wider Attribute recently, so the provided pretrained models has slightly different performance (~0.1%mAP) from what has been presented in our paper.
 ## Training
 #### VOC2007
 You can run either of these two lines below 
