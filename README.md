@@ -45,8 +45,9 @@ Then directly run the following command to generate json file (for implementatio
 ```shell
 python utils/prepare_voc.py  --data_path  Dataset/VOCdevkit
 python utils/prepare_coco.py --data_path  Dataset/COCO2014
+python utils/prepare_wider.py --data_path Dataset/WIDER
 ```
-which will automatically result in json files in *./data/voc07* and *./data/coco*
+which will automatically result in json files in *./data/voc07*, *./data/coco* and *./data/wider*
 
 ## Validation
 We provide pretrained models on [Google Drive](https://www.google.com/drive/) for validation. ResNet101 trained on ImageNet with **CutMix** augmentation can be downloaded 
