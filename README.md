@@ -85,8 +85,8 @@ CUDA_VISIBLE_DEVICES=0 python val.py --num_heads 4 --lam 0.5 --dataset coco --nu
 ```
 For wider attribute with ViT models, run the following
 ```shell
-CUDA_VISIBLE_DEVICES=0 python val.py --model vit_B16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_B16_MODEL.pth
-CUDA_VISIBLE_DEVICES=0 python val.py --model vit_L16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_L16_MODEL.pth
+CUDA_VISIBLE_DEVICES=0 python val.py --model vit_B16_224 --img_size 224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_B16_MODEL.pth
+CUDA_VISIBLE_DEVICES=0 python val.py --model vit_L16_224 --img_size 224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14  --load_from ViT_L16_MODEL.pth
 ```
 To provide pretrained VIT models on Wider-Attribute dataset, we retrain them recently, which has a slightly different performance (~0.1%mAP) from what has been presented in our paper. The structure of the VIT models is the initial VIT version (**An image is worth 16x16 words: Transformers for image recognition at scale**, [link](https://arxiv.org/pdf/2010.11929.pdf)) and the implementation code of the VIT models is derived from [http://github.com/rwightman/pytorch-image-models/](http://github.com/rwightman/pytorch-image-models/).
 ## Training
@@ -113,11 +113,11 @@ You can feel free to adjust the hyper-parameters such as number of attention hea
 #### Wider-Attribute
 run the VIT_B16_224 with 1 heads
 ```shell
-CUDA_VISIBLE_DEVICES=0 python main.py --model vit_B16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14
+CUDA_VISIBLE_DEVICES=0 python main.py --model vit_B16_224 --img_size 224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14
 ```
 run the VIT_L16_224 with 1 heads
 ```shell
-CUDA_VISIBLE_DEVICES=0,1 python main.py --model vit_L16_224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14
+CUDA_VISIBLE_DEVICES=0,1 python main.py --model vit_L16_224 --img_size 224 --num_heads 1 --lam 0.3 --dataset wider --num_cls 14
 ```
 Note that the VIT_L16_224 model consume larger GPU space, so we use 2 GPUs to train them.
 ## Notice
