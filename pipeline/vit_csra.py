@@ -27,7 +27,7 @@ import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 from functools import partial
 from .timm_utils import DropPath, to_2tuple, trunc_normal_
-from .resnet_csra import MHA, CSRA
+from .csra import MHA, CSRA
 
 
 default_cfgs = {
