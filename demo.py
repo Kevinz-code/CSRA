@@ -76,6 +76,7 @@ def demo():
 
         model.eval()
         logit = model(img).squeeze(0)
+        logit = nn.Sigmoid()(logit)
 
 
         pos = torch.where(logit > 0.5)[0].cpu().numpy()
