@@ -56,9 +56,9 @@ CUDA_VISIBLE_DEVICES=0 python demo.py --model resnet101 --num_heads 1 --lam 0.1 
 ```
 which will output like this:
 ```shell
-utils/images/000001.jpg prediction: dog,person,
-utils/images/000004.jpg prediction: car,
-utils/images/000002.jpg prediction: train,
+utils/demo_images/000001.jpg prediction: dog,person,
+utils/demo_images/000004.jpg prediction: car,
+utils/demo_images/000002.jpg prediction: train,
 ...
 ```
 
