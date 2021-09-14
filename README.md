@@ -33,8 +33,8 @@ Dataset/
 ......
 |-- WIDER/
 |---- Annotations/
-|------ wider_attribute_test.json/
-|------ wider_attribute_trainval.json/
+|------ wider_attribute_test.json
+|------ wider_attribute_trainval.json
 |---- Image/
 |------ train/
 |------ val/
