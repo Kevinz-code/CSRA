@@ -47,7 +47,7 @@ python utils/prepare/voc.py  --data_path  Dataset/VOCdevkit
 python utils/prepare/coco.py --data_path  Dataset/COCO2014
 python utils/prepare/wider.py --data_path Dataset/WIDER
 ```
-which will automatically result in json files in *./data/voc07*, *./data/coco* and *./data/wider*
+which will automatically result in annotation json files in *./data/voc07*, *./data/coco* and *./data/wider*
 
 ## Demo
 We provide prediction demos of our models. The demo images (picked from VCO2007) have already been put into *./utils/demo_images/*, you can simply run demo.py by using our CSRA models pretrained on VOC2007:
