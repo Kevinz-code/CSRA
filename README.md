@@ -123,7 +123,7 @@ Note that the VIT_L16_224 model consume larger GPU space, so we use 2 GPUs to tr
 ## Notice
 To avoid confusion, please note the **4 lines of code** in Figure 1 (in paper) is only used in **test** stage (without training), which is our motivation. When our model is end-to-end training and testing, **multi-head-attention** (H=1, H=2, H=4, etc.) is used with different T values. Also, when H=1 and T=infty, the implementation code of **multi-head-attention** is exactly the same with Figure 1.
 
-We didn't use any new augmentation such as Autoaugment, RandAugment in our ResNet series models.
+We didn't use any new augmentation such as **Autoaugment, RandAugment** in our ResNet series models.
 
 ## Acknowledgement
 
