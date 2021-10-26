@@ -36,7 +36,7 @@ def make_data(data_path=None, tag="train"):
                 target[cls] = 1
             path = img_info['file_name']
         data['target'] = target
-        data['img_path'] = os.path.join(os.path.join(data_path, "/images/val2014/"), path)
+        data['img_path'] = os.path.join(os.path.join(data_path, "images/"+tag+"2014/"), path)
         message.append(data)
 
     with open('data/coco/{}_coco2014.json'.format(tag), 'w') as f:
