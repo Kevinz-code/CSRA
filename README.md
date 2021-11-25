@@ -43,9 +43,9 @@ Dataset/
 ```
 Then directly run the following command to generate json file (for implementation) of these datasets.
 ```shell
-python utils/prepare/voc.py  --data_path  Dataset/VOCdevkit
-python utils/prepare/coco.py --data_path  Dataset/COCO2014
-python utils/prepare/wider.py --data_path Dataset/WIDER
+python utils/prepare/prepare_voc.py  --data_path  Dataset/VOCdevkit
+python utils/prepare/prepare_coco.py --data_path  Dataset/COCO2014
+python utils/prepare/prepare_wider.py --data_path Dataset/WIDER
 ```
 which will automatically result in annotation json files in *./data/voc07*, *./data/coco* and *./data/wider*
 
