@@ -72,7 +72,8 @@ We provide pretrained models on [Google Drive](https://www.google.com/drive/) fo
 | VOC2007     |ResNet-cut |     1         |  95.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=otx_&id=1bzSsWhGG-zUNQRMB7rQCuPMqLZjnrzFh)  |
 | COCO        |ResNet-101 |     4         |  83.3  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
-| COCO        |VIT_L16_224 |     8         |  86.5  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=1Rmm&id=1TTzCpRadhYDwZSEow3OVdrh1TKezWHF_)|
+| COCO        |VIT_L16_224 |     8         |  86.5  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=1Rmm&id=1TTzCpRadhYDwZSEow3OVdrh1TKezWHF_)
+|
 | COCO        |VIT_L16_224* |     8         |  86.9  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=xpbJ&id=1zYE88pmWcZfcrdQsP8-9JMo4n_g5pO4l)
 |
 | Wider       |VIT_B16_224|     1         |  89.0  |  224x224 |[download](https://drive.google.com/u/0/uc?id=1qkJgWQ2EOYri8ITLth_wgnR4kEsv0bfj&export=download)   |
