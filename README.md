@@ -70,6 +70,7 @@ We provide pretrained models on [Google Drive](https://www.google.com/drive/) fo
 |  ---------- | -------   |  :--------:   | ------ |  :---:          | --------   |
 | VOC2007     |ResNet-101 |     1         |  94.7  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=bXcv&id=1cQSRI_DWyKpLa0tvxltoH9rM4IZMIEWJ)   |
 | VOC2007     |ResNet-cut |     1         |  95.2  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=otx_&id=1bzSsWhGG-zUNQRMB7rQCuPMqLZjnrzFh)  |
+| VOC2007 (extra)    |ResNet-cut |     1         |  96.8  |  448x448 |[download](https://drive.google.com/u/0/uc?id=1XgVE3Q3vmE8hjdDjqow_2GyjPx_5bDjU&export=download)  |
 | COCO        |ResNet-101 |     4         |  83.3  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=EWtH&id=1e_WzdVgF_sQc--ubN-DRnGVbbJGSJEZa)   |
 | COCO        |ResNet-cut |     6         |  85.6  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=uEcu&id=17FgLUe_vr5sJX6_TT-MPdP5TYYAcVEPF)   |
 | COCO        |VIT_L16_224 |     8      |  86.5  |  448x448 |[download](https://drive.google.com/u/0/uc?export=download&confirm=1Rmm&id=1TTzCpRadhYDwZSEow3OVdrh1TKezWHF_)|
